@@ -17,8 +17,9 @@ public class ConnectDemo_5 {
     // 一次编译,多次执行
     // 数据代码分离,实现了解耦
     public static void main(String[] args) {
+        InputStream is;
         try {
-            InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("jdbc");
+            is = Thread.currentThread().getContextClassLoader().getResourceAsStream("jdbc");
             Properties properties = new Properties();
             properties.load(is);
             Class.forName(properties.getProperty("mysqlClass"));
