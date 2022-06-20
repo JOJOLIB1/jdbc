@@ -19,7 +19,7 @@ public class ConnectDemo_5 {
     public static void main(String[] args) {
         InputStream is;
         try {
-            is = Thread.currentThread().getContextClassLoader().getResourceAsStream("jdbc");
+            is = Thread.currentThread().getContextClassLoader().getResourceAsStream("jdbc.properties");
             Properties properties = new Properties();
             properties.load(is);
             Class.forName(properties.getProperty("mysqlClass"));

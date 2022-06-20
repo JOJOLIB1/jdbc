@@ -14,7 +14,7 @@ import java.util.Properties;
  * Date: 2022-06-20
  * Time: 16:05
  */
-public class PreparedStatement {
+public class PreparedStatementDemo {
     public static void main(String[] args) {
         InputStream is = null;
         Connection connection = null;
