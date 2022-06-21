@@ -22,6 +22,7 @@ public class JDBCUtil {
     public static Connection getConnection() {
         Connection connection = null;
         try {
+            // .properties 必须要写,否则找不到
             InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
             Properties properties = new Properties();
             properties.load(is);
