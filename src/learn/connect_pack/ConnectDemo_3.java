@@ -1,4 +1,4 @@
-package connect_pack;
+package learn.connect_pack;
 
 import java.sql.Driver;
 import java.sql.DriverManager;

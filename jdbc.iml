@@ -8,17 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="mysqlDriver">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/mysql-connector-java-5.1.7-bin.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../暂存/JDBC/3-资料/2-驱动/01-MySQL驱动/mysql-connector-java-5.1.7/src" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="JUnit4">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/junit-4.13.1.jar!/" />
@@ -28,5 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="mysql-connector-java-8.0.29" level="project" />
   </component>
 </module>

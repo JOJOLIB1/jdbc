@@ -1,8 +1,8 @@
-package unionpractice;
+package learn.unionpractice;
 
 
 import bean.Customers;
-import preparedstatement_pack.GeneralQuery;
+import learn.preparedstatement_pack.GeneralQuery;
 import util.JDBCUtil;
 
 import java.sql.Connection;

@@ -1,4 +1,4 @@
-package preparedstatement_pack;
+package learn.preparedstatement_pack;
 
 import java.io.IOException;
 import java.io.InputStream;

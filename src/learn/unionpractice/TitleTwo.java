@@ -1,9 +1,9 @@
-package unionpractice;
+package learn.unionpractice;
 
 import bean.ExamStudent;
 import org.junit.Test;
-import preparedstatement_pack.GeneralQuery;
-import preparedstatement_pack.GeneralUpdateSql;
+import learn.preparedstatement_pack.GeneralQuery;
+import learn.preparedstatement_pack.GeneralUpdateSql;
 
 import java.util.List;
 import java.util.Scanner;

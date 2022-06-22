@@ -1,4 +1,4 @@
-package preparedstatement_pack;
+package learn.preparedstatement_pack;
 
 import bean.Order;
 
