@@ -19,18 +19,14 @@ public class JDBCUtil {
     // ORM对应的类 √
     // 表的通用查询 √
 
-    public static Connection getConnection() {
+    public static Connection getConnection() throws Exception{
         Connection connection = null;
-        try {
             // .properties 必须要写,否则找不到
             InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
             Properties properties = new Properties();
             properties.load(is);
             Class.forName(properties.getProperty("mysqlClass"));
             connection = DriverManager.getConnection(properties.getProperty("url"), properties.getProperty("user"), properties.getProperty("password"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return connection;
     }
 

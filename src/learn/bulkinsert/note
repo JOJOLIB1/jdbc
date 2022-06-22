@@ -1,4 +1,25 @@
+execute()
+    若返回ture,则说明有结果集,否则没有结果集
+1.executeUpdate() 2.executeQuery()
+    1.返回值为int类型,即影响了N行数据
+
+结果集中的getObject()等方法有重载
+    1.参数是Label,填字段的别名,这个更灵活
+    2.参数是index,填索引
+
 对于prepareStatement
 只需要预编译一次,后续只需要覆盖占位符即可
 对于Statement
 需要编译N次,且N次对应的字符串都不一样,会占用大量的字符串常量池,造成效率降低
+
+批量操作涉及的函数
+addBatch() executeBatch() clearBatch()
+MySQL默认不支持,所以要在url上加上参数
+低版本jar包也不支持,所以要更换高版本
+
+
+为什么在URL中加上 ?UNICODE=TURE&CHARACTER_SET=UTF8
+因为该jar包版本过低,默认是Latin1的字符集,即使Java或MySQL都支持UTF8也于事无补
+
+
+DDL操作可以放在通用修改中

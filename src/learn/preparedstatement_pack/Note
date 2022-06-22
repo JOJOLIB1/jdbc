@@ -43,11 +43,3 @@ PrepareStatement的好处
 
 
 
-execute()
-    若返回ture,则说明有结果集,否则没有结果集
-1.executeUpdate() 2.executeQuery()
-    1.返回值为int类型,即影响了N行数据
-
-结果集中的getObject()等方法有重载
-    1.参数是Label,填字段的别名,这个更灵活
-    2.参数是index,填索引

@@ -24,7 +24,7 @@ public class GeneralUpdateSql {
                 ps.setObject(i + 1,args[i]);
             }
             return ps.executeUpdate();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             JDBCUtil.closeAll(ps,connection);
