@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * Time: 21:51
  */
 public class GeneralUpdateSql {
-    public void update(String sql,Object... args) {
+    public int update(String sql,Object... args) {
         PreparedStatement ps = null;
         Connection connection = null;
         try {
@@ -23,11 +23,12 @@ public class GeneralUpdateSql {
             for (int i = 0; i < args.length; i++) {
                 ps.setObject(i + 1,args[i]);
             }
-            ps.execute();
+            return ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             JDBCUtil.closeAll(ps,connection);
         }
+        return 0;
     }
 }
