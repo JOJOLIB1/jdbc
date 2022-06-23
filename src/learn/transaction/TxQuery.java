@@ -19,13 +19,36 @@ import java.util.List;
  */
 public class TxQuery {
     @Test
-    public void queryDemo() throws Exception {
-        Connection connection = JDBCUtil.getConnection();
-        connection.setAutoCommit(false);
-        connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
-        List<Order> orders = txQuery(Order.class, connection, "SELECT order_name orderName FROM `order` where order_id = ?", 4);
-        orders.forEach(System.out::println);
-//      JDBCUtil.closeAll(null,connection,null);
+    public void queryDemo()  {
+        Connection connection = null;
+        try {
+            connection = JDBCUtil.getConnection();
+            connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
+//  ==========================隐式事务开始================================
+            List<Order> orders = txQuery(Order.class, connection, "SELECT order_name orderName FROM `order` where order_id = ?", 4);
+            orders.forEach(System.out::println);
+            connection.commit();
+//  ==========================隐式事务结束=================================
+        } catch (Exception e) {
+            try {
+                if (connection != null) {
+                    connection.rollback();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null) {
+                    connection.setAutoCommit(true);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            JDBCUtil.closeAll(null,connection,null);
+        }
     }
 
     public <T> List<T> txQuery(Class<T> clazz, Connection connection, String sql, Object... args) {

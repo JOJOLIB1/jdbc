@@ -14,8 +14,8 @@ execute()
 
 批量操作涉及的函数
 addBatch() executeBatch() clearBatch()
-MySQL默认不支持,所以要在url上加上参数,或者换跟高级的版本就支持
-低版本jar包也不支持,所以要更换高版本
+MySQL默认不支持,所以要在url上加上参数
+不论是高版本或者是低板本,默认都不支持
 
 
 为什么在URL中加上 ?UNICODE=TURE&CHARACTER_SET=UTF8
