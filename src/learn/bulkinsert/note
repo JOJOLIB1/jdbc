@@ -14,7 +14,7 @@ execute()
 
 批量操作涉及的函数
 addBatch() executeBatch() clearBatch()
-MySQL默认不支持,所以要在url上加上参数
+MySQL默认不支持,所以要在url上加上参数,或者换跟高级的版本就支持
 低版本jar包也不支持,所以要更换高版本
 
 
@@ -23,3 +23,6 @@ MySQL默认不支持,所以要在url上加上参数
 
 
 DDL操作可以放在通用修改中
+
+
+关闭会话(连接)会自动提交事务,类似于两个begin;
