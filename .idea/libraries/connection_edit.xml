@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="connection_edit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-dbutils-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-pool-1.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/druid-1.1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/c3p0-0.9.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../暂存/JDBC/3-资料/2-驱动/03-数据库连接池驱动/commons-dbcp-1.4-src.zip!/commons-dbcp-1.4-src/src/java" />
+      <root url="jar://$PROJECT_DIR$/../../暂存/JDBC/3-资料/2-驱动/03-数据库连接池驱动/druid-1.1.10/druid-1.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
